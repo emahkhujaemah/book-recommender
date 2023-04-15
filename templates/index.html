@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommender System</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+    .text-white {
+        color: white;
+    }
+
+    .text-violet {
+        color: #FDE2F3;
+    }
+</style>
+
+<body style="background-color: #2A2F4F;">
+
+    <nav class="navbar" style="background-color: #FDE2F3;">
+        <p class="navbar-brand">My Book Recommender</p>
+        <ul class="nav navbar-nav">
+            <li class="nav-item nav-link"><a href="/recommend">Recommender</a></li>
+            <li class="nav-item nav-link"><a href="/">Home</a></li>
+            <li class="nav-item nav-link"><a href="">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-white" style="font-size: 50px;">Top 50 Books</h1>
+            </div>
+
+            {% for i in range(book_name|length) %}
+
+            <div class="col-md-3" style="margin-top: 30px;">
+                <div class="card">
+                    <img class="card-img-top" src="{{ image[i] }}" alt="IMG">
+                    <h3 class="text-white">{{ book_name[i] }}</h3>
+                    <h5 class="text-white">{{ author[i] }}</h5>
+                    <h5 class="text-white">Votes - {{ votes[i] }}</h5>
+                    <h5 class="text-white">Rating - {{ rating[i] }}</h5>
+                </div>
+            </div>
+            {% endfor%}
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
