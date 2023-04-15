@@ -30,26 +30,26 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col">
                 <h1 class="text-white" style="font-size: 50px;">Recommend Books</h1>
                 <form action="/recommend_books" method="POST">
                     <input type="text" name="user_input" class="form-control"><br>
                     <input type="submit" class="btn btn-lg btn-warning">
                 </form>
-
             </div>
 
 
             {% if data %}
 
             {% for i in data %}
-
-            <div class="col-md-3" style="margin-top: 30px;">
+            <div class="col-md-2" style="margin-top: 30px;">
                 <div class="card">
-                    <div class="card-body">
-                        <img class="card-img-top" src="{{ i[2] }}" alt="IMG">
-                        <p class="text-white">{{ i[0] }}</p>
-                        <h4 class="text-white">{{ i[1] }}</h4>
+                    <div class="text-center">
+                        <img class="card-img-top img-thumbnail" src="{{ i[2] }}" alt="IMG">
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="card-text text-white " style="margin-top: 30px;"">{{ i[0] }}</p>
+                        <h4 class=" card-title text-white">{{ i[1] }}</h4>
                     </div>
                 </div>
             </div>
