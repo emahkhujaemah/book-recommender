@@ -4,4 +4,4 @@ Website Book Recommender System - Collaborative Filtering Based Recommender with
 
 Result
 
-![book-recommender.png]({https://khuzaemah.github.io/assets/img/book-recommender.png})
+![book-recommender.png]({https://raw.githubusercontent.com/khuzaemah/book-recommender/main/image/book-recommender.png})
